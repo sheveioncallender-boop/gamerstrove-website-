@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+ <template id="layout_gt" inherit_id="website.layout" priority="95" name="Trove branding — native Odoo header and checkout">
+  <xpath expr="//div[@id='wrapwrap']" position="attributes"><attribute name="t-attf-class" add="#{'gt-site' if website.gt_brand_enabled else ''}" separator=" "/></xpath>
+  <xpath expr="//header/*[1]" position="before"><div t-if="website.gt_brand_enabled and website.gt_announcement" class="gt-announcement"><div class="gt-container"><span t-field="website.gt_announcement"/><a href="/event">Find your next tournament ↗</a></div></div><div t-if="website.gt_brand_enabled and website.gt_demo_notice" class="gt-demo-bar">Client preview · Sample products, prices and tournament dates</div></xpath>
+ </template>
+ <template id="footer_gt" inherit_id="website.footer_custom" priority="95" name="Trove editable footer">
+  <xpath expr="//div[@id='footer']" position="attributes"><attribute name="t-if">not no_footer and not website.gt_brand_enabled</attribute></xpath>
+  <xpath expr="//div[@id='footer']" position="after"><div t-if="website.gt_brand_enabled and not no_footer" id="gt_footer" class="gt oe_structure oe_structure_solo" t-ignore="true"><section class="gt-footer" data-snippet="s_text_block" data-name="Trove Footer"><div class="gt-container gt-footer-grid"><div><a href="/"><img t-att-src="website.image_url(website, 'logo')" alt="Gamer’s Trove" width="68" height="68"/></a><h3>SHOP. PLAY. CONNECT.</h3><p>For the love of the game.<br/>San Fernando, Trinidad &amp; Tobago.</p></div><div><h4>Explore</h4><a href="/shop">Shop the Trove</a><a href="/event">Tournaments</a><a href="/start-playing">New to gaming?</a></div><div><h4>The community</h4><a href="/about-trove">Our story</a><a href="/trove-community">Trove Titans</a><a href="/visit-trove">Visit us</a></div><div><h4>Stay connected</h4><a t-if="website.gt_instagram" t-att-href="website.gt_instagram" target="_blank" rel="noopener">Instagram ↗</a><a t-if="website.gt_facebook" t-att-href="website.gt_facebook" target="_blank" rel="noopener">Facebook ↗</a><a t-if="website.gt_email" t-att-href="'mailto:' + website.gt_email" t-field="website.gt_email"/><a t-if="website.gt_phone" t-att-href="'tel:' + website.gt_phone" t-field="website.gt_phone"/></div></div></section></div></xpath>
+ </template>
+</odoo>

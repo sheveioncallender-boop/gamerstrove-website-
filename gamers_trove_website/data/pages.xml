@@ -1,0 +1,351 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+  <data noupdate="1">
+    <record id="page_home" model="website.page">
+      <field name="name">Home</field>
+      <field name="url">/trove-home</field>
+      <field name="type">qweb</field>
+      <field name="key">gamers_trove_website.page_home</field>
+      <field name="website_meta_title">Home | Gamer’s Trove</field>
+      <field name="website_meta_description">Shop tabletop games, join tournaments and meet the Gamer’s Trove community in San Fernando, Trinidad &amp; Tobago.</field>
+      <field name="website_id" ref="website.default_website"/>
+      <field name="is_published" eval="True"/>
+      <field name="arch" type="xml">
+        <t t-name="gamers_trove_website.page_home">
+          <t t-call="website.layout">
+            <div id="wrap" class="gt-content oe_structure">
+              <section class="gt gt-hero" data-snippet="s_text_block" data-name="Trove hero — edit image, text and links">
+                <div class="gt-hero-photo">
+                  <img src="/gamers_trove_website/static/src/img/trade.jpg" alt="A Gamer’s Trove player with a gaming playmat and the store logo" fetchpriority="high" width="640" height="1136"/>
+                </div>
+                <div class="gt-container gt-hero-content">
+                  <div class="gt-hero-copy">
+                    <p class="gt-kicker"><span/> THE HOME OF YOUR NEXT ADVENTURE</p>
+                    <h1>YOUR NEXT<br/>GREAT <em>PLAY.</em></h1>
+                    <p>Find your game. Build your collection.<br/>Meet your people at Gamer’s Trove.</p>
+                    <div class="gt-actions">
+                      <a href="/shop" class="gt-btn">Shop the Trove <span>↗</span></a>
+                      <a href="/event" class="gt-btn gt-btn-outline">Enter a tournament <span>↗</span></a>
+                    </div>
+                    <div class="gt-hero-caption"><span>01 /</span> SHOP. PLAY. CONNECT.<small>SAN FERNANDO · TRINIDAD &amp; TOBAGO</small></div>
+                  </div>
+                  <div class="gt-photo-tag">
+                    <span>THE TROVE TITANS</span>
+                    <strong>REAL PLAYERS.<br/>REAL COMMUNITY.</strong>
+                  </div>
+                </div>
+              </section>
+              <section class="gt gt-benefit-strip" data-snippet="s_text_block" data-name="Store highlights">
+                <div class="gt-container gt-benefits">
+                  <div>
+                    <span>◈</span>
+                    <p>
+                      <strong>A world of games</strong>
+                      <small>Cards, tabletop &amp; collectibles</small>
+                    </p>
+                  </div>
+                  <div>
+                    <span>⚑</span>
+                    <p>
+                      <strong>Get in the game</strong>
+                      <small>Tournaments &amp; shared adventures</small>
+                    </p>
+                  </div>
+                  <div>
+                    <span>⌖</span>
+                    <p>
+                      <strong>Your local Trove</strong>
+                      <small>San Fernando, Trinidad &amp; Tobago</small>
+                    </p>
+                  </div>
+                </div>
+              </section>
+              <t t-call="gamers_trove_website.categories"/>
+              <t t-call="gamers_trove_website.products"/>
+              <section class="gt gt-promo-section" data-snippet="s_text_block" data-name="Shop and beginner banners">
+                <div class="gt-container gt-promos">
+                  <a href="/shop" class="gt-promo gt-promo-shop">
+                    <div>
+                      <p class="gt-kicker">THE NEXT CARD. THE NEXT STORY.</p>
+                      <h2>UPGRADE<br/>YOUR GAME.</h2>
+                      <span class="gt-text-link">Explore the shop ↗</span>
+                    </div>
+                    <span class="gt-promo-dice" aria-hidden="true">✦</span>
+                  </a>
+                  <a href="/start-playing" class="gt-promo gt-promo-start">
+                    <img src="/gamers_trove_website/static/src/img/recap.jpg" alt="Players gathered around a tabletop game" loading="lazy"/>
+                    <div>
+                      <p class="gt-kicker">FIRST TIME AT THE TABLE?</p>
+                      <h2>START YOUR<br/>ADVENTURE.</h2>
+                      <span class="gt-text-link">Find your first game ↗</span>
+                    </div>
+                  </a>
+                </div>
+              </section>
+              <t t-call="gamers_trove_website.events"/>
+              <section class="gt gt-section gt-community-section" data-snippet="s_text_block" data-name="Trove community">
+                <div class="gt-container gt-community-split">
+                  <div class="gt-community-photo">
+                    <img src="/gamers_trove_website/static/src/img/weekends.jpg" alt="Gamer’s Trove players celebrating together" width="600" height="600" loading="lazy"/>
+                    <span class="gt-photo-caption">GOOD GAMES. GREAT COMPANY.</span>
+                  </div>
+                  <div class="gt-community-copy">
+                    <p class="gt-kicker">MORE THAN A PLACE TO SHOP</p>
+                    <h2>FIND YOUR GAME.<br/><em>FIND YOUR PEOPLE.</em></h2>
+                    <p>The thrill of a close match. The start of a new campaign. The friends you didn’t know you were about to make.</p>
+                    <p>Gamer’s Trove brings together card players, tabletop adventurers and collectors in San Fernando. Come for your favourite game. Stay for the community.</p>
+                    <a href="/trove-community" class="gt-btn gt-btn-red">Meet the Trove Titans <span>↗</span></a>
+                  </div>
+                </div>
+              </section>
+              <section class="gt gt-cta-section" data-snippet="s_text_block" data-name="Visit call to action">
+                <div class="gt-container gt-cta">
+                  <div>
+                    <p class="gt-kicker">PULL UP A CHAIR</p>
+                    <h2>THE NEXT MOVE IS YOURS.</h2>
+                  </div>
+                  <a href="/visit-trove" class="gt-btn gt-btn-dark">Visit Gamer’s Trove <span>↗</span></a>
+                </div>
+              </section>
+            </div>
+          </t>
+        </t>
+      </field>
+    </record>
+    <record id="page_about" model="website.page">
+      <field name="name">About Gamer’s Trove</field>
+      <field name="url">/about-trove</field>
+      <field name="type">qweb</field>
+      <field name="key">gamers_trove_website.page_about</field>
+      <field name="website_meta_title">About Gamer’s Trove | Gamer’s Trove</field>
+      <field name="website_meta_description">Shop tabletop games, join tournaments and meet the Gamer’s Trove community in San Fernando, Trinidad &amp; Tobago.</field>
+      <field name="website_id" ref="website.default_website"/>
+      <field name="is_published" eval="True"/>
+      <field name="arch" type="xml">
+        <t t-name="gamers_trove_website.page_about">
+          <t t-call="website.layout">
+            <div id="wrap" class="gt-content oe_structure">
+              <section class="gt gt-page-intro" data-snippet="s_text_block" data-name="Page introduction">
+                <div class="gt-container">
+                  <p class="gt-kicker">OUR STORY</p>
+                  <h1>FOR THE LOVE<br/>OF THE GAME.</h1>
+                  <p>A local store. A shared passion. A whole community of possibilities.</p>
+                </div>
+              </section>
+              <section class="gt gt-section gt-community-section" data-snippet="s_text_block" data-name="Trove community">
+                <div class="gt-container gt-community-split">
+                  <div class="gt-community-photo">
+                    <img src="/gamers_trove_website/static/src/img/weekends.jpg" alt="Gamer’s Trove players celebrating together" width="600" height="600" loading="lazy"/>
+                    <span class="gt-photo-caption">GOOD GAMES. GREAT COMPANY.</span>
+                  </div>
+                  <div class="gt-community-copy">
+                    <p class="gt-kicker">MORE THAN A PLACE TO SHOP</p>
+                    <h2>FIND YOUR GAME.<br/><em>FIND YOUR PEOPLE.</em></h2>
+                    <p>The thrill of a close match. The start of a new campaign. The friends you didn’t know you were about to make.</p>
+                    <p>Gamer’s Trove brings together card players, tabletop adventurers and collectors in San Fernando. Come for your favourite game. Stay for the community.</p>
+                    <a href="/trove-community" class="gt-btn gt-btn-red">Meet the Trove Titans <span>↗</span></a>
+                  </div>
+                </div>
+              </section>
+              <section class="gt gt-section" data-snippet="s_text_block" data-name="Our purpose">
+                <div class="gt-container gt-editorial-grid">
+                  <div>
+                    <span>01</span>
+                    <h2>SHOP.</h2>
+                    <p>Explore trading card games, modern board games, role-playing adventures and fan collectibles. Find something for your next session or your growing collection.</p>
+                  </div>
+                  <div>
+                    <span>02</span>
+                    <h2>PLAY.</h2>
+                    <p>Bring your deck and discover organised gaming at the Trove. Check each tournament’s page for the format, entry details, schedule and available tickets.</p>
+                  </div>
+                  <div>
+                    <span>03</span>
+                    <h2>CONNECT.</h2>
+                    <p>Get to know players who share your interests. From your first game to your next tournament, there is always another story to share.</p>
+                  </div>
+                </div>
+              </section>
+              <section class="gt gt-cta-section" data-snippet="s_text_block" data-name="Visit call to action">
+                <div class="gt-container gt-cta">
+                  <div>
+                    <p class="gt-kicker">PULL UP A CHAIR</p>
+                    <h2>THE NEXT MOVE IS YOURS.</h2>
+                  </div>
+                  <a href="/visit-trove" class="gt-btn gt-btn-dark">Visit Gamer’s Trove <span>↗</span></a>
+                </div>
+              </section>
+            </div>
+          </t>
+        </t>
+      </field>
+    </record>
+    <record id="page_community" model="website.page">
+      <field name="name">The Trove Community</field>
+      <field name="url">/trove-community</field>
+      <field name="type">qweb</field>
+      <field name="key">gamers_trove_website.page_community</field>
+      <field name="website_meta_title">The Trove Community | Gamer’s Trove</field>
+      <field name="website_meta_description">Shop tabletop games, join tournaments and meet the Gamer’s Trove community in San Fernando, Trinidad &amp; Tobago.</field>
+      <field name="website_id" ref="website.default_website"/>
+      <field name="is_published" eval="True"/>
+      <field name="arch" type="xml">
+        <t t-name="gamers_trove_website.page_community">
+          <t t-call="website.layout">
+            <div id="wrap" class="gt-content oe_structure">
+              <section class="gt gt-page-intro" data-snippet="s_text_block" data-name="Page introduction">
+                <div class="gt-container">
+                  <p class="gt-kicker">THE TROVE TITANS</p>
+                  <h1>GOOD GAMES.<br/>GREAT COMPANY.</h1>
+                  <p>A look at the people and moments that make Gamer’s Trove.</p>
+                </div>
+              </section>
+              <section class="gt gt-section" data-snippet="s_text_block" data-name="Community gallery">
+                <div class="gt-container gt-gallery">
+                  <figure>
+                    <img src="/gamers_trove_website/static/src/img/weekends.jpg" alt="Community tournament celebration" loading="lazy"/>
+                    <figcaption>Shared wins. Familiar faces.</figcaption>
+                  </figure>
+                  <figure>
+                    <img src="/gamers_trove_website/static/src/img/trade.jpg" alt="A player celebrating at the Trove" loading="lazy"/>
+                    <figcaption>For the collectors. For the players.</figcaption>
+                  </figure>
+                  <figure>
+                    <img src="/gamers_trove_website/static/src/img/recap.jpg" alt="Tabletop players at Gamer’s Trove" loading="lazy"/>
+                    <figcaption>Another game. Another good memory.</figcaption>
+                  </figure>
+                </div>
+                <div class="gt-container gt-social-cta">
+                  <h2>KEEP UP WITH THE TROVE.</h2>
+                  <p>Find community recaps, announcements and more on our official pages.</p>
+                  <div class="gt-actions">
+                    <a t-if="website.gt_instagram" t-att-href="website.gt_instagram" class="gt-btn gt-btn-red" target="_blank" rel="noopener">Instagram ↗</a>
+                    <a t-if="website.gt_facebook" t-att-href="website.gt_facebook" class="gt-btn gt-btn-dark" target="_blank" rel="noopener">Facebook ↗</a>
+                  </div>
+                </div>
+              </section>
+              <t t-call="gamers_trove_website.events"/>
+              <section class="gt gt-cta-section" data-snippet="s_text_block" data-name="Visit call to action">
+                <div class="gt-container gt-cta">
+                  <div>
+                    <p class="gt-kicker">PULL UP A CHAIR</p>
+                    <h2>THE NEXT MOVE IS YOURS.</h2>
+                  </div>
+                  <a href="/visit-trove" class="gt-btn gt-btn-dark">Visit Gamer’s Trove <span>↗</span></a>
+                </div>
+              </section>
+            </div>
+          </t>
+        </t>
+      </field>
+    </record>
+    <record id="page_visit" model="website.page">
+      <field name="name">Visit Gamer’s Trove</field>
+      <field name="url">/visit-trove</field>
+      <field name="type">qweb</field>
+      <field name="key">gamers_trove_website.page_visit</field>
+      <field name="website_meta_title">Visit Gamer’s Trove | Gamer’s Trove</field>
+      <field name="website_meta_description">Shop tabletop games, join tournaments and meet the Gamer’s Trove community in San Fernando, Trinidad &amp; Tobago.</field>
+      <field name="website_id" ref="website.default_website"/>
+      <field name="is_published" eval="True"/>
+      <field name="arch" type="xml">
+        <t t-name="gamers_trove_website.page_visit">
+          <t t-call="website.layout">
+            <div id="wrap" class="gt-content oe_structure">
+              <section class="gt gt-page-intro" data-snippet="s_text_block" data-name="Page introduction">
+                <div class="gt-container">
+                  <p class="gt-kicker">VISIT GAMER’S TROVE</p>
+                  <h1>YOUR ADVENTURE.<br/>OUR TABLE.</h1>
+                  <p>Plan your next visit, ask about a game or get help with an upcoming tournament.</p>
+                </div>
+              </section>
+              <section class="gt gt-section" data-snippet="s_text_block" data-name="Visit and contact">
+                <div class="gt-container gt-visit-grid">
+                  <div>
+                    <img class="gt-visit-photo" src="/gamers_trove_website/static/src/img/weekends.jpg" alt="Inside Gamer’s Trove, San Fernando" loading="lazy"/>
+                    <h2>COME MEET YOUR PEOPLE.</h2>
+                    <p>Have a question about products, a first visit or tournament entry? Get in touch with the team.</p>
+                    <a href="/contactus" class="gt-text-link">Send an enquiry →</a>
+                  </div>
+                  <t t-call="gamers_trove_website.contact"/>
+                </div>
+              </section>
+            </div>
+          </t>
+        </t>
+      </field>
+    </record>
+    <record id="page_beginner" model="website.page">
+      <field name="name">Start Playing</field>
+      <field name="url">/start-playing</field>
+      <field name="type">qweb</field>
+      <field name="key">gamers_trove_website.page_beginner</field>
+      <field name="website_meta_title">Start Playing | Gamer’s Trove</field>
+      <field name="website_meta_description">Shop tabletop games, join tournaments and meet the Gamer’s Trove community in San Fernando, Trinidad &amp; Tobago.</field>
+      <field name="website_id" ref="website.default_website"/>
+      <field name="is_published" eval="True"/>
+      <field name="arch" type="xml">
+        <t t-name="gamers_trove_website.page_beginner">
+          <t t-call="website.layout">
+            <div id="wrap" class="gt-content oe_structure">
+              <section class="gt gt-page-intro" data-snippet="s_text_block" data-name="Page introduction">
+                <div class="gt-container">
+                  <p class="gt-kicker">NEW TO THE TABLE?</p>
+                  <h1>EVERY GREAT PLAYER<br/>STARTS SOMEWHERE.</h1>
+                  <p>A new game. A new adventure. Let’s find your starting point.</p>
+                </div>
+              </section>
+              <section class="gt gt-section" data-snippet="s_text_block" data-name="Getting started">
+                <div class="gt-container gt-editorial-grid">
+                  <div>
+                    <span>01</span>
+                    <h2>FIND YOUR GAME.</h2>
+                    <p>Love strategy and collecting? Explore trading card games. Prefer a shared story? Try a role-playing game. Looking for a relaxed evening? Discover board games.</p>
+                  </div>
+                  <div>
+                    <span>02</span>
+                    <h2>ASK THE TEAM.</h2>
+                    <p>Tell us what you enjoy, who you’ll be playing with and your budget. Ask about starter options and current availability before choosing your first game.</p>
+                  </div>
+                  <div>
+                    <span>03</span>
+                    <h2>TAKE A SEAT.</h2>
+                    <p>Browse upcoming events and check the format, experience level and what to bring. Each event page includes its own registration details.</p>
+                  </div>
+                </div>
+                <div class="gt-container gt-faq">
+                  <h2>A FEW GOOD QUESTIONS.</h2>
+                  <details>
+                    <summary>Do I need experience to visit?</summary>
+                    <p>You can visit to browse and ask questions. If you want to join a session, contact the team to find an event suited to your experience.</p>
+                  </details>
+                  <details>
+                    <summary>How do I enter a tournament?</summary>
+                    <p>Open Tournaments, select an event and review its details. Choose an available ticket, enter the attendee information and follow the checkout steps for paid entry.</p>
+                  </details>
+                  <details>
+                    <summary>Where do I find rules and entry requirements?</summary>
+                    <p>Read the event description before registering. Contact the organiser if you need clarification about deck formats, equipment, age requirements or the event’s cancellation terms.</p>
+                  </details>
+                  <details>
+                    <summary>Can I buy products online?</summary>
+                    <p>Browse the shop, choose your options and use the cart to checkout. Current prices, availability, payment methods and delivery options are shown in the shop and checkout.</p>
+                  </details>
+                </div>
+              </section>
+              <section class="gt gt-cta-section" data-snippet="s_text_block" data-name="Visit call to action">
+                <div class="gt-container gt-cta">
+                  <div>
+                    <p class="gt-kicker">PULL UP A CHAIR</p>
+                    <h2>THE NEXT MOVE IS YOURS.</h2>
+                  </div>
+                  <a href="/visit-trove" class="gt-btn gt-btn-dark">Visit Gamer’s Trove <span>↗</span></a>
+                </div>
+              </section>
+            </div>
+          </t>
+        </t>
+      </field>
+    </record>
+  </data>
+</odoo>

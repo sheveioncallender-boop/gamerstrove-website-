@@ -1,0 +1,42 @@
+[
+  {
+    "asset": "assets/brand.jpg",
+    "source_page": "https://www.facebook.com/GamersTroveTT/",
+    "description": "Gamer's Trove, San Fernando. 1,475 followers \u00b7 4 talking about this \u00b7 701 were here. Table-top (TT) gaming business with modern Board Games; offering Role Playing Games (e.g. D&D, Call of Cthulhu,..."
+  },
+  {
+    "asset": "assets/weekends.jpg",
+    "source_page": "https://www.facebook.com/GamersTroveTT/posts/weekends-are-booked-busy-at-south-trinidads-best-local-game-store-visit-us-at-ga/1421228896687881/",
+    "description": "Weekends are BOOKED & BUSY at South Trinidad's best local game store! Visit us at \ud83d\udccdGamer's Trove, San Fernando for the elite tournament experience. \ud83c\udfc6\u2728\ufe0f #TroveTitans #Tournament #TCG #TradingCardGame..."
+  },
+  {
+    "asset": "assets/genshin.jpg",
+    "source_page": "https://www.facebook.com/GamersTroveTT/videos/genshin-impact-necklaces-keychains-are-in-stock-%EF%B8%8F-get-them-while-stocks-last-you/564230163199253/",
+    "description": "Genshin Impact Necklaces & Keychains are in stock! \u2728\ufe0f\ud83d\ude4c\ud83c\udffd Get them while stocks last! You don't want to miss out on these trinkets \ud83d\udd25\nSecure yours today at \ud83d\udccdGamer's Trove, Carlton Centre, San Fernando..."
+  },
+  {
+    "asset": "assets/recap.jpg",
+    "source_page": "https://www.facebook.com/GamersTroveTT/videos/a-little-weekend-recap-of-back-to-back-events-at-gamers-trove-san-fernando-%EF%B8%8F-we-/1027586983013275/",
+    "description": "A little weekend recap of back to back events at \ud83d\udccdGamer's Trove, San Fernando \ud83c\udfc6\u2728\ufe0f\ud83d\ude4c\ud83c\udffd We can't wait to see what fun this weekend brings! \ud83e\udd73 Visit us to see what all the hype is about! \ud83d\udd25\n#GamersTrove..."
+  },
+  {
+    "asset": "assets/trade.jpg",
+    "source_page": "https://www.facebook.com/GamersTroveTT/videos/trade-night-tournament-recap-we-wish-to-thank-you-all-for-your-continued-support/1685481149442881/",
+    "description": "TRADE NIGHT TOURNAMENT RECAP! \ud83e\udd73\ud83d\ude4c\ud83c\udffd We wish to thank you all for your continued support at \ud83d\udccdGamer's Trove, San Fernando \ud83d\ude4f\ud83c\udffc Our Trove Titans came out in their numbers on Friday night for all TCGs! \ud83c\udfc6\u2728\ufe0f..."
+  },
+  {
+    "asset": "gamers_trove_demo/static/src/img/blue-eyes.png",
+    "source_page": "https://www.yugioh-card.com/en/products/sdwd/",
+    "purpose": "Illustrative sample product photo from the manufacturer, not a verified store stock claim."
+  },
+  {
+    "asset": "gamers_trove_demo/static/src/img/foundations.png",
+    "source_page": "https://magic.wizards.com/en/news/announcements/foundations-starter-collection-contents",
+    "purpose": "Illustrative sample product photo from the manufacturer."
+  },
+  {
+    "asset": "gamers_trove_demo/static/src/img/beginner.png",
+    "source_page": "https://magic.wizards.com/en/news/announcements/announcing-magic-the-gathering-foundations",
+    "purpose": "Illustrative sample product photo from the manufacturer."
+  }
+]

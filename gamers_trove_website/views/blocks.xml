@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+ <template id="categories" name="Trove live Odoo categories">
+  <t t-set="categories" t-value="website._gt_categories()"/>
+  <section t-if="categories" class="gt gt-categories" contenteditable="false"><div class="gt-container gt-category-grid">
+   <a t-foreach="categories" t-as="category" t-att-href="'/shop/category/%s' % website.env['ir.http']._slug(category)" class="gt-category">
+    <span class="gt-category-icon" t-out="{'cards':'▱', 'magic':'✦', 'dice':'⬡', 'board':'▦', 'gift':'◇', 'shield':'◈'}.get(category.gt_icon, '▱')"/>
+    <span t-field="category.name"/><span class="gt-category-arrow">↗</span>
+   </a>
+  </div></section>
+ </template>
+ <template id="products" name="Trove live Odoo product selection">
+  <t t-set="products" t-value="website._gt_products()"/>
+  <section t-if="products" class="gt gt-section" contenteditable="false"><div class="gt-container">
+   <div class="gt-heading"><div><p class="gt-kicker">BUILD YOUR NEXT ADVENTURE</p><h2>THE TROVE PICKS.</h2></div><a href="/shop" class="gt-text-link">Shop all products <span>↗</span></a></div>
+   <t t-set="prices" t-value="products._get_sales_prices(website)"/>
+   <div class="gt-products"><article t-foreach="products" t-as="product" class="gt-product">
+    <a t-att-href="product.website_url" class="gt-product-image"><img t-att-src="'/web/image/product.template/%s/image_1024' % product.id" t-att-alt="product.name" loading="lazy" width="500" height="500"/><span t-if="product.gt_badge" t-field="product.gt_badge" class="gt-badge"/></a>
+    <div class="gt-product-body"><small t-if="product.public_categ_ids" t-out="product.public_categ_ids[:1].name"/><h3><a t-att-href="product.website_url" t-field="product.name"/></h3>
+     <t t-set="price" t-value="prices[product.id]"/><div class="gt-product-bottom">
+      <strong t-if="not website.prevent_zero_price_sale or price['price_reduce']" t-out="price['price_reduce']" t-options="{'widget': 'monetary', 'display_currency': website.currency_id}"/>
+      <span t-else="">Contact us</span><a t-att-href="product.website_url" class="gt-product-button" t-att-aria-label="'View ' + product.name">View product <span>↗</span></a>
+     </div>
+    </div>
+   </article></div>
+  </div></section>
+ </template>
+ <template id="events" name="Trove live Odoo tournaments">
+  <t t-set="events" t-value="website._gt_events()"/>
+  <section class="gt gt-section gt-events" contenteditable="false"><div class="gt-container">
+   <div class="gt-heading"><div><p class="gt-kicker">YOUR NEXT CHALLENGE STARTS HERE</p><h2>TAKE YOUR SEAT.</h2></div><a href="/event" class="gt-text-link">All tournaments <span>↗</span></a></div>
+   <div t-if="events" class="gt-event-grid"><article t-foreach="events" t-as="event" class="gt-event">
+    <a t-att-href="event.website_url" class="gt-event-image"><img t-if="event.gt_card_image" t-att-src="'/web/image/event.event/%s/gt_card_image' % event.id" t-att-alt="event.name" loading="lazy"/><img t-else="" src="/gamers_trove_website/static/src/img/recap.jpg" alt="Gaming at Gamer’s Trove" loading="lazy"/><span class="gt-event-date"><b t-field="event.date_begin" t-options="{'format':'dd', 'tz': event.date_tz}"/><span t-field="event.date_begin" t-options="{'format':'MMM', 'tz': event.date_tz}"/></span></a>
+    <div class="gt-event-body"><small t-if="event.gt_game" t-field="event.gt_game"/><h3><a t-att-href="event.website_url" t-field="event.name"/></h3><p><span t-field="event.date_begin" t-options="{'format':'EEE, MMM d · h:mm a', 'tz': event.date_tz}"/> <span t-out="event.date_tz"/></p>
+     <div class="gt-event-bottom"><span t-if="event.event_registrations_open">Registration open</span><span t-else="">Registration closed</span><a t-att-href="event.website_url" class="gt-text-link">View entry options ↗</a></div>
+    </div>
+   </article></div>
+   <div t-else="" class="gt-empty"><h3>The next match is on its way.</h3><p>Check the event calendar or contact the team for upcoming tournaments.</p><a href="/event" class="gt-btn">View event calendar ↗</a></div>
+  </div></section>
+ </template>
+ <template id="contact" name="Trove Odoo contact details"><div class="gt-contact-details">
+  <div t-if="website.gt_address"><small>FIND THE TROVE</small><p class="gt-lines" t-field="website.gt_address"/><a t-if="website._gt_maps_url()" t-att-href="website._gt_maps_url()" target="_blank" rel="noopener">Get directions ↗</a></div>
+  <div><small>GET IN TOUCH</small><a t-if="website.gt_phone" t-att-href="'tel:' + website.gt_phone" t-field="website.gt_phone"/><a t-if="website.gt_email" t-att-href="'mailto:' + website.gt_email" t-field="website.gt_email"/></div>
+  <div><small>OPENING HOURS</small><p t-if="website.gt_hours" class="gt-lines" t-field="website.gt_hours"/><p t-else="">Contact us to confirm opening hours.</p></div>
+  <a t-if="website._gt_whatsapp_url()" t-att-href="website._gt_whatsapp_url()" class="gt-btn" target="_blank" rel="noopener">Chat on WhatsApp ↗</a>
+ </div></template>
+</odoo>

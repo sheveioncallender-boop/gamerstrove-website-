@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+ <record id="settings_gt" model="ir.ui.view"><field name="name">Gamer’s Trove website settings</field><field name="model">res.config.settings</field><field name="inherit_id" ref="website.res_config_settings_view_form"/><field name="arch" type="xml"><xpath expr="//app[@name='website']" position="inside"><block title="Gamer’s Trove" name="gt_settings">
+ <setting string="Website branding"><field name="gt_brand_enabled"/></setting>
+ <setting string="Announcement"><field name="gt_announcement"/></setting>
+ <setting string="Telephone"><field name="gt_phone"/></setting><setting string="WhatsApp" help="International digits only. Clear to hide WhatsApp links."><field name="gt_whatsapp"/></setting>
+ <setting string="Email"><field name="gt_email"/></setting><setting string="Address" help="Website contact details only. Manage invoice/company details separately in Odoo."><field name="gt_address"/></setting>
+ <setting string="Opening hours"><field name="gt_hours" placeholder="Enter confirmed opening hours"/></setting>
+ <setting string="Instagram"><field name="gt_instagram" widget="url"/></setting><setting string="Facebook"><field name="gt_facebook" widget="url"/></setting>
+ <setting string="Client preview notice"><field name="gt_demo_notice"/></setting>
+ <setting string="Retire demonstration records" groups="base.group_system" help="Unpublishes only this website’s sample products and tournaments; preserves order history and real records."><button name="action_gt_unpublish_demo" type="object" string="Unpublish demo products and tournaments" class="btn btn-secondary" confirm="Unpublish the demo products and tournaments on this website?"/></setting>
+ </block></xpath></field></record>
+ <record id="product_gt" model="ir.ui.view"><field name="name">Trove product merchandising</field><field name="model">product.template</field><field name="inherit_id" ref="product.product_template_form_view"/><field name="arch" type="xml"><xpath expr="//page[@name='sales']" position="inside"><group string="Gamer’s Trove storefront"><field name="gt_featured"/><field name="gt_badge"/><field name="gt_demo" readonly="1"/></group></xpath></field></record>
+ <record id="category_gt" model="ir.ui.view"><field name="name">Trove category merchandising</field><field name="model">product.public.category</field><field name="inherit_id" ref="website_sale.product_public_category_form_view"/><field name="arch" type="xml"><field name="parent_id" position="after"><field name="gt_featured"/><field name="gt_icon"/><field name="sequence"/></field></field></record>
+ <record id="event_gt" model="ir.ui.view"><field name="name">Trove tournament merchandising</field><field name="model">event.event</field><field name="inherit_id" ref="event.view_event_form"/><field name="arch" type="xml"><xpath expr="//notebook" position="inside"><page string="Trove storefront" name="gt_storefront"><group><field name="gt_featured"/><field name="gt_game"/><field name="gt_card_image" widget="image"/><field name="gt_demo" readonly="1"/></group><p>Manage ticket prices, capacity, attendee questions and registrations using this event’s native Odoo tabs. Publish the event to make it visible online. Only public events appear on the homepage.</p></page></xpath></field></record>
+</odoo>

@@ -1,0 +1,15 @@
+{
+    'name': "Gamer’s Trove — Website & Tournaments",
+    'version': '19.0.1.0.0',
+    'summary': 'Odoo-managed gaming storefront, community pages and native paid event tickets',
+    'category': 'Website/eCommerce',
+    'author': 'Spxcorp Limited',
+    'license': 'LGPL-3',
+    'depends': ['website_sale_stock', 'website_event_sale'],
+    'data': ['views/backend.xml', 'views/blocks.xml', 'views/layout.xml', 'data/categories.xml', 'data/pages.xml'],
+    'assets': {'web.assets_frontend': ['gamers_trove_website/static/src/css/trove.css']},
+    'post_init_hook': 'post_init_hook',
+    'uninstall_hook': 'uninstall_hook',
+    'application': True,
+    'installable': True,
+}

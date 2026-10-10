@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+  <data noupdate="1">
+    <record id="category_yugioh" model="product.public.category">
+      <field name="name">Yu-Gi-Oh!</field>
+      <field name="sequence">10</field>
+      <field name="gt_icon">cards</field>
+      <field name="gt_featured" eval="True"/>
+      <field name="website_id" ref="website.default_website"/>
+    </record>
+    <record id="category_magic" model="product.public.category">
+      <field name="name">Magic: The Gathering</field>
+      <field name="sequence">20</field>
+      <field name="gt_icon">magic</field>
+      <field name="gt_featured" eval="True"/>
+      <field name="website_id" ref="website.default_website"/>
+    </record>
+    <record id="category_rpg" model="product.public.category">
+      <field name="name">Role-playing games</field>
+      <field name="sequence">30</field>
+      <field name="gt_icon">dice</field>
+      <field name="gt_featured" eval="True"/>
+      <field name="website_id" ref="website.default_website"/>
+    </record>
+    <record id="category_board" model="product.public.category">
+      <field name="name">Board games</field>
+      <field name="sequence">40</field>
+      <field name="gt_icon">board</field>
+      <field name="gt_featured" eval="True"/>
+      <field name="website_id" ref="website.default_website"/>
+    </record>
+    <record id="category_collectibles" model="product.public.category">
+      <field name="name">Collectibles</field>
+      <field name="sequence">50</field>
+      <field name="gt_icon">gift</field>
+      <field name="gt_featured" eval="True"/>
+      <field name="website_id" ref="website.default_website"/>
+    </record>
+    <record id="category_accessories" model="product.public.category">
+      <field name="name">Accessories</field>
+      <field name="sequence">60</field>
+      <field name="gt_icon">shield</field>
+      <field name="gt_featured" eval="True"/>
+      <field name="website_id" ref="website.default_website"/>
+    </record>
+  </data>
+</odoo>
