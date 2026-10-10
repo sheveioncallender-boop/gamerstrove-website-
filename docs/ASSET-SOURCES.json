@@ -38,5 +38,12 @@
     "asset": "gamers_trove_demo/static/src/img/beginner.png",
     "source_page": "https://magic.wizards.com/en/news/announcements/announcing-magic-the-gathering-foundations",
     "purpose": "Illustrative sample product photo from the manufacturer."
+  },
+  {
+    "asset": "gamers_trove_website/static/src/img/hero-players.jpg",
+    "source_page": "https://www.pexels.com/photo/friends-playing-on-the-table-8111359/",
+    "photographer": "Pavel Danilyuk",
+    "license": "Pexels License",
+    "purpose": "Licensed lifestyle photograph for the hero. These are models, not identified as Gamer\u2019s Trove customers. Resized and compressed for web delivery."
   }
 ]

@@ -8,4 +8,15 @@
   <xpath expr="//div[@id='footer']" position="attributes"><attribute name="t-if">not no_footer and not website.gt_brand_enabled</attribute></xpath>
   <xpath expr="//div[@id='footer']" position="after"><div t-if="website.gt_brand_enabled and not no_footer" id="gt_footer" class="gt oe_structure oe_structure_solo" t-ignore="true"><section class="gt-footer" data-snippet="s_text_block" data-name="Trove Footer"><div class="gt-container gt-footer-grid"><div><a href="/"><img t-att-src="website.image_url(website, 'logo')" alt="Gamer’s Trove" width="68" height="68"/></a><h3>SHOP. PLAY. CONNECT.</h3><p>For the love of the game.<br/>San Fernando, Trinidad &amp; Tobago.</p></div><div><h4>Explore</h4><a href="/shop">Shop the Trove</a><a href="/event">Tournaments</a><a href="/start-playing">New to gaming?</a></div><div><h4>The community</h4><a href="/about-trove">Our story</a><a href="/trove-community">Trove Titans</a><a href="/visit-trove">Visit us</a></div><div><h4>Stay connected</h4><a t-if="website.gt_instagram" t-att-href="website.gt_instagram" target="_blank" rel="noopener">Instagram ↗</a><a t-if="website.gt_facebook" t-att-href="website.gt_facebook" target="_blank" rel="noopener">Facebook ↗</a><a t-if="website.gt_email" t-att-href="'mailto:' + website.gt_email" t-field="website.gt_email"/><a t-if="website.gt_phone" t-att-href="'tel:' + website.gt_phone" t-field="website.gt_phone"/></div></div></section></div></xpath>
  </template>
+ <template id="header_gt_layout" inherit_id="website.template_header_default" priority="110" name="Trove native two-row shop header">
+  <xpath expr="//t[@t-call='website.placeholder_header_search_box']" position="attributes">
+   <attribute name="_layout.f"/>
+   <attribute name="_layout">'input' if website.gt_brand_enabled else 'modal'</attribute>
+   <attribute name="_item_class">'gt-header-search' if website.gt_brand_enabled else ''</attribute>
+  </xpath>
+ </template>
+ <template id="header_gt_phone" inherit_id="website.header_text_element" priority="110" name="Trove phone from website settings">
+  <xpath expr="//li" position="attributes"><attribute name="t-if">not website.gt_brand_enabled</attribute></xpath>
+  <xpath expr="//li" position="after"><li t-if="website.gt_brand_enabled and website.gt_phone" t-attf-class="gt-header-phone #{_item_class}"><a t-att-href="'tel:' + website.gt_phone" class="nav-link"><i class="fa fa-phone me-2" aria-hidden="true"/><span t-field="website.gt_phone"/></a></li></xpath>
+ </template>
 </odoo>

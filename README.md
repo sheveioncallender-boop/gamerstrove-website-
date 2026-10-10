@@ -66,3 +66,13 @@ odoo --addons-path=/path/to/odoo/addons,/path/to/repository -d trove_test -i gam
 ```
 
 A live Odoo database and browser were not available during preparation. Installation, checkout, live provider callbacks and visual browser QA must be validated in staging. See `docs/ACCEPTANCE.md`.
+
+## Update 19.0.1.1.0 — banner, header, buttons and product photos
+
+Rebuild from `main` in Cloudpepper, then **upgrade Gamer’s Trove — Website & Tournaments** in Odoo Apps. The upgrade replaces only the original top hero photo and its photo caption; other editor changes are retained. The native desktop header uses two rows with a visible search field. Desktop and mobile phone links use Website Settings → Gamer’s Trove → Telephone. Red and gold button states apply across the native shop, cart and event pages; dark footer/banner contrast is corrected.
+
+In **Website Settings → Gamer’s Trove**, click **Install client products and tournaments**. Alternatively, install **Gamer’s Trove — Client Demo** from Apps (upgrade it if already installed). This is a separate addon: installing only the website does not create the product catalogue. Four actual product examples have matching manufacturer/store photos stored in native `image_1920`. Prices remain illustrative and current store stock has not been verified.
+
+If the records already exist but are unpublished or lack photos, use **Website Settings → Gamer’s Trove → Publish catalogue and restore missing photos**. It only targets the four existing module-owned products, does not duplicate them, and preserves custom images, prices, variants and order history. The automatic upgrade repairs missing photos; it republishes only when the client-demo notice is still enabled.
+
+The new hero is a licensed Pexels lifestyle photo. The original community images remain on the community sections. `docs/ASSET-SOURCES.json` records the photographer and sources.

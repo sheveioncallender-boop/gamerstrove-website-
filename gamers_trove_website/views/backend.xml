@@ -7,6 +7,7 @@
  <setting string="Email"><field name="gt_email"/></setting><setting string="Address" help="Website contact details only. Manage invoice/company details separately in Odoo."><field name="gt_address"/></setting>
  <setting string="Opening hours"><field name="gt_hours" placeholder="Enter confirmed opening hours"/></setting>
  <setting string="Instagram"><field name="gt_instagram" widget="url"/></setting><setting string="Facebook"><field name="gt_facebook" widget="url"/></setting>
+ <setting string="Create client products" groups="base.group_system" help="Installs the Client Demo addon with four photographed products, necklace options and three sample paid-entry tournaments. Run once; repeated clicks do not create duplicates."><button name="action_gt_install_catalog" type="object" string="Install client products and tournaments" class="btn btn-primary"/></setting>
  <setting string="Client preview notice"><field name="gt_demo_notice"/></setting>
  <setting string="Retire demonstration records" groups="base.group_system" help="Unpublishes only this website’s sample products and tournaments; preserves order history and real records."><button name="action_gt_unpublish_demo" type="object" string="Unpublish demo products and tournaments" class="btn btn-secondary" confirm="Unpublish the demo products and tournaments on this website?"/></setting>
  </block></xpath></field></record>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+ <record id="settings_catalog" model="ir.ui.view">
+  <field name="name">Trove client catalogue tools</field><field name="model">res.config.settings</field>
+  <field name="inherit_id" ref="gamers_trove_website.settings_gt"/>
+  <field name="arch" type="xml"><xpath expr="//block[@name='gt_settings']" position="inside">
+   <setting string="Client product catalogue" groups="base.group_system" help="Publish the four sample products and fill missing product photos. Existing photos, prices, variants, inventory and orders are preserved.">
+    <button name="action_gt_publish_catalog" type="object" string="Publish catalogue and restore missing photos" class="btn btn-primary"/>
+   </setting>
+  </xpath></field>
+ </record>
+</odoo>

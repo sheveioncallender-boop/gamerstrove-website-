@@ -16,7 +16,7 @@
             <div id="wrap" class="gt-content oe_structure">
               <section class="gt gt-hero" data-snippet="s_text_block" data-name="Trove hero — edit image, text and links">
                 <div class="gt-hero-photo">
-                  <img src="/gamers_trove_website/static/src/img/trade.jpg" alt="A Gamer’s Trove player with a gaming playmat and the store logo" fetchpriority="high" width="640" height="1136"/>
+                  <img src="/gamers_trove_website/static/src/img/hero-players.jpg" alt="Friends enjoying a tabletop game together" fetchpriority="high" width="1800" height="1202"/>
                 </div>
                 <div class="gt-container gt-hero-content">
                   <div class="gt-hero-copy">
@@ -30,8 +30,8 @@
                     <div class="gt-hero-caption"><span>01 /</span> SHOP. PLAY. CONNECT.<small>SAN FERNANDO · TRINIDAD &amp; TOBAGO</small></div>
                   </div>
                   <div class="gt-photo-tag">
-                    <span>THE TROVE TITANS</span>
-                    <strong>REAL PLAYERS.<br/>REAL COMMUNITY.</strong>
+                    <span>MAKE TIME TO PLAY</span>
+                    <strong>GOOD GAMES.<br/>GREAT COMPANY.</strong>
                   </div>
                 </div>
               </section>

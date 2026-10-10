@@ -1,5 +1,5 @@
 from odoo import fields, models
-from odoo.exceptions import AccessError
+from odoo.exceptions import AccessError, UserError
 
 
 class ResConfigSettings(models.TransientModel):
@@ -14,6 +14,27 @@ class ResConfigSettings(models.TransientModel):
     gt_instagram = fields.Char(related='website_id.gt_instagram', readonly=False)
     gt_facebook = fields.Char(related='website_id.gt_facebook', readonly=False)
     gt_announcement = fields.Char(related='website_id.gt_announcement', readonly=False)
+
+    def action_gt_install_catalog(self):
+        self.ensure_one()
+        if not self.env.user.has_group('base.group_system'):
+            raise AccessError(self.env._('Only administrators can install the client catalogue.'))
+        modules = self.env['ir.module.module']
+        module = modules.search([('name', '=', 'gamers_trove_demo')], limit=1)
+        if not module:
+            modules.update_list()
+            module = modules.search([('name', '=', 'gamers_trove_demo')], limit=1)
+        if not module:
+            raise UserError(self.env._('Rebuild the repository in Cloudpepper first. The gamers_trove_demo addon folder must be available.'))
+        if module.state == 'installed':
+            return {'type': 'ir.actions.client', 'tag': 'display_notification', 'params': {
+                'title': self.env._('Catalogue already installed'),
+                'message': self.env._('Use Publish catalogue and restore missing photos below to show the existing products.'),
+                'type': 'info', 'sticky': False,
+            }}
+        if self.website_id != self.env.ref('website.default_website'):
+            raise UserError(self.env._('The client catalogue is installed on the default website. Select that website first.'))
+        return module.button_immediate_install()
 
     def action_gt_unpublish_demo(self):
         self.ensure_one()
