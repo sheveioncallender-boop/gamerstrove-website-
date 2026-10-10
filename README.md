@@ -43,7 +43,7 @@ An enabled payment provider is required for live online payments. No provider cr
 
 ## Sample client data
 
-The optional demo addon installs four sample products (including a three-option necklace variant), three future tournament examples and native ticket products. A small, configurable client-preview notice distinguishes illustrative stock/prices/dates from live offers. Demo products and events are tagged in the backend.
+The optional demo addon installs four sample products (including a three-option necklace variant), three future tournament examples and native ticket products. The records are illustrative examples for the client presentation. Demo products and events are tagged in the backend.
 
 To finish the presentation, use **Website Settings → Gamer’s Trove → Unpublish demo products and tournaments**. This preserves orders, registrations and real products. Do not uninstall the demo addon after placing orders against its records; unpublish instead.
 
@@ -73,6 +73,12 @@ Rebuild from `main` in Cloudpepper, then **upgrade Gamer’s Trove — Website &
 
 In **Website Settings → Gamer’s Trove**, click **Install client products and tournaments**. Alternatively, install **Gamer’s Trove — Client Demo** from Apps (upgrade it if already installed). This is a separate addon: installing only the website does not create the product catalogue. Four actual product examples have matching manufacturer/store photos stored in native `image_1920`. Prices remain illustrative and current store stock has not been verified.
 
-If the records already exist but are unpublished or lack photos, use **Website Settings → Gamer’s Trove → Publish catalogue and restore missing photos**. It only targets the four existing module-owned products, does not duplicate them, and preserves custom images, prices, variants and order history. The automatic upgrade repairs missing photos; it republishes only when the client-demo notice is still enabled.
+If the records already exist but are unpublished or lack photos, use **Website Settings → Gamer’s Trove → Publish catalogue and restore missing photos**. It only targets the four existing module-owned products, does not duplicate them, and preserves custom images, prices, variants and order history. The automatic upgrade repairs missing photos; it republishes only when the client demonstration remains active.
 
 The new hero is a licensed Pexels lifestyle photo. The original community images remain on the community sections. `docs/ASSET-SOURCES.json` records the photographer and sources.
+
+## Update 19.0.1.1.1 — compact responsive header
+
+Upgrade the Website & Tournaments addon after rebuilding from `main`. The full-width header search is replaced by Odoo’s native search-dialog icon. Wide desktops use one header row; smaller desktops use two rows to keep controls readable. The phone remains in the desktop announcement strip and the mobile menu. Mobile uses equal-width side columns: menu on the left, logo in the exact centre, native cart/wishlist on the right. Search and account access remain in Odoo’s mobile menu. This update only changes header presentation; no catalogue installation or data reload is needed.
+
+The decorative section numbers and top client-preview strip have also been removed. Upgrade migration removes only the original numeric labels from existing editable pages; page copy and event dates are preserved. The demonstration status remains a backend setting for managing sample records.

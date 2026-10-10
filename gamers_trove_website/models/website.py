@@ -7,7 +7,7 @@ class Website(models.Model):
     _inherit = 'website'
 
     gt_brand_enabled = fields.Boolean('Gamer’s Trove branding')
-    gt_demo_notice = fields.Boolean('Show client demo notice')
+    gt_demo_notice = fields.Boolean('Client demonstration active')
     gt_phone = fields.Char('Store phone', default='+1 868 376-5722')
     gt_whatsapp = fields.Char('WhatsApp number', default='18683765722')
     gt_email = fields.Char('Store email', default='gamers.trove.tt@gmail.com')

@@ -1,6 +1,6 @@
 {
     'name': "Gamer’s Trove — Website & Tournaments",
-    'version': '19.0.1.1.0',
+    'version': '19.0.1.1.1',
     'summary': 'Odoo-managed gaming storefront, community pages and native paid event tickets',
     'category': 'Website/eCommerce',
     'author': 'Spxcorp Limited',
